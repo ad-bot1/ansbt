@@ -1,4 +1,4 @@
-name: Telegram Bot
+name: Telegram Bot Robota Kiev
 
 on:
   schedule:
@@ -34,5 +34,6 @@ jobs:
       
     - name: Run bot
       env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  
-      run: python home/runner/work/answerbot1/bot_otv.py
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
+      run: python bot_otv.py
