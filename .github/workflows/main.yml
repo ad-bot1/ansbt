@@ -31,9 +31,12 @@ jobs:
     
     - name: Install requirements  
       run: pip install pyTelegramBotAPI==4.8.0
+
+    - name: Copy py  
+      run: cp ./bot_otv.py
       
     - name: Run bot
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
-      run: python /home/runner/work/ansbt/ansbt/bot_otv.py
+      run: python bot_otv.py
