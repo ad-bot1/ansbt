@@ -37,4 +37,4 @@ jobs:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
       working-directory: ./scripts
-      run: python bot_otv.py
+      run: python bot.py
