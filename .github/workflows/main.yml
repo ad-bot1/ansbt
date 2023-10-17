@@ -31,12 +31,10 @@ jobs:
     
     - name: Install requirements  
       run: pip install pyTelegramBotAPI==4.8.0
-      
-    - name: Download bot_otv.py
-      run: curl -o /home/runner/work/ansbt/ansbt/bot_otv.py https://github.com/ad-bot1/ansbt/blob/main/bot_otv.py
-
+     
     - name: Run bot
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
-      run: python /home/runner/work/ansbt/ansbt/bot_otv.py
+      run: python bot_otv.py
+      working-directory: ./
