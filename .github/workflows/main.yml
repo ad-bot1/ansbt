@@ -33,7 +33,7 @@ jobs:
       run: pip install pyTelegramBotAPI==4.8.0
 
     - name: Copy py  
-      run: cp ./bot_otv.py
+      run: cp bot_otv.py /home/runner/work/ansbt/ansbt
       
     - name: Run bot
       env:
