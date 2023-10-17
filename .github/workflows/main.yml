@@ -32,13 +32,6 @@ jobs:
     - name: Install requirements  
       run: pip install pyTelegramBotAPI==4.8.0
       
-    - name: Stop previous bot
-      run: |
-        bot_pid=$(pgrep -af "python bot.py")
-        if [ -n "$bot_pid" ]; then
-          kill -9 $bot_pid
-        fi
-
     - name: Run bot
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}  
