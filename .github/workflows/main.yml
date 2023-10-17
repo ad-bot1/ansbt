@@ -37,4 +37,4 @@ jobs:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
       run: python bot_otv.py
-      working-directory: ./ansbt
+      working-directory: /home/runner/work/ansbt/ansbt/
