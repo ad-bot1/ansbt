@@ -30,7 +30,7 @@ jobs:
     steps:
     
     - name: Install requirements  
-      run: pip install -r requirements.txt
+      run: pip install pyTelegramBotAPI==4.8.0
       
     - name: Stop previous bot
       run: |
