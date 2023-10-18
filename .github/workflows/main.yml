@@ -27,8 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install telebot
         pip install pyTelegramBotAPI==4.8.0.
+        
     - name: Copy bot.py
-      run: cp /github/workspace/bot.py /home/runner/work/ansbt/ansbt/bot.py
+      run: cp bot.py /home/runner/work/ansbt/ansbt/bot.py
 
     - name: Run bot
       env:
