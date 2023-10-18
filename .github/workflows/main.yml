@@ -10,13 +10,8 @@ on:
 concurrency: 
   group: ${{ github.workflow }}
   cancel-in-progress: true
-  
-defaults:
-  run:
-    working-directory: scripts
     
 jobs:
-
   setup:
   
     runs-on: ubuntu-latest
@@ -24,7 +19,12 @@ jobs:
     steps:
     
     - uses: actions/checkout@v4
-
+    
+    defaults:
+      run:
+        shell: bash
+        working-directory: scripts
+        
   run-bot:
 
     needs: setup
