@@ -28,13 +28,10 @@ jobs:
         pip install telebot
         pip install pyTelegramBotAPI==4.8.0.
 
-    - name: Copy bot.py
-        run:|
-          cp bot.py /home/runner/work/ansbt/ansbt/bot.py
-  
     - name: Run bot
       env:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
       run: |
+        cp bot.py /home/runner/work/ansbt/ansbt/bot.py
         python /home/runner/work/ansbt/ansbt/bot.py
