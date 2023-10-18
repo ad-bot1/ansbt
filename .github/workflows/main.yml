@@ -2,14 +2,13 @@ name: Telegram Bot Robota Kiev
 
 on:
   schedule:
-   - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
   
 permissions:
   contents: write
-  
-# Налаштування обмеження одночасних запусків   
-concurrency: 
+
+concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
     
@@ -34,5 +33,5 @@ jobs:
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         GROUP_CHAT_ID: ${{ secrets.GROUP_CHAT_ID }}
       run: |
-        COPY bot.py /bot.py
-        python bot.py
+        cp bot.py /bot.py
+        python /bot.py
