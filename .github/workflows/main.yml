@@ -13,7 +13,7 @@ concurrency:
   
 defaults:
   run:
-    working-directory: ./scripts
+    working-directory: scripts
     
 jobs:
 
@@ -23,7 +23,7 @@ jobs:
 
     steps:
     
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
   run-bot:
 
